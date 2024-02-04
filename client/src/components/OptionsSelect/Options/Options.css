@@ -1,0 +1,51 @@
+.options__section button {
+  border-radius: 1.3vh;
+  margin: 0.6vh;
+  font-size: 1.7vh;
+  width: 12vh;
+  height: 3.5vh;
+  font-family: "Arial";
+  cursor: pointer;
+}
+
+.options__section p {
+  font-size: 1.6vh;
+  margin: 0.6vh;
+  font-family: "Helvetica";
+}
+
+.options__section {
+  text-align: center;
+  background-color: lightgrey;
+  border-radius: 1vh;
+  padding: 0.5vh;
+  width: 42vh;
+}
+
+.options--selected--Balloons, .save-button--Balloons:hover {
+  background-color: var(--balloons-accent);
+  color: white;
+}
+
+.options--selected--Tropical, .save-button--Tropical:hover {
+  background-color: lightgreen;
+
+}
+
+.options--selected--Bubbles, .save-button--Bubbles:hover {
+  background-color: var(--bubbles-accent);
+  color: white;
+}
+
+.options--selected--Splash, .save-button--Splash:hover {
+  background-color: var(--splash);
+}
+
+.options--selected--Fireworks, .save-button--Fireworks:hover {
+  background-color: var(--fireworks);
+  color: white;
+}
+
+.options--selected--Ice, .save-button--Ice:hover {
+  background-color: var(--ice);
+}
