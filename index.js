@@ -79,7 +79,7 @@ app.get("/callback", (req, res) => {
           expires_in,
         });
 
-        res.redirect(`${FRONTEND_URI}?${queryParams}`);
+        res.redirect(`${FRONTEND_URI}/?${queryParams}`);
       } else {
         res.redirect(`/?${querystring.stringify({ error: "invalid_token" })}`);
       }
@@ -114,9 +114,9 @@ app.get("/refresh_token", (req, res) => {
     });
 });
 
-app.get('*', (req, res) => {
+app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
-})
+});
 
 app.listen(PORT, () => {
   console.log(`Express app listening at http://localhost:${PORT}`);
