@@ -114,7 +114,7 @@ function App() {
 
   return (
     <>
-      <div className="App">
+      <div className="main-app">
         <OptionsSelect
           trackLimit={trackLimit}
           trackLimits={trackLimits}
