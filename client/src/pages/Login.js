@@ -3,7 +3,7 @@ import "./Login.css";
 const LOGIN_URI =
   process.env.NODE_ENV !== "production"
     ? "http://localhost:8888/login"
-    : "https://thatswhatify-1b19f0e0e43c.herokuapp.com/";
+    : "https://thatswhatify-1b19f0e0e43c.herokuapp.com/login";
 
 export default function Login() {
   return (
