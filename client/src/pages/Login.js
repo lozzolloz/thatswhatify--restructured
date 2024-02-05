@@ -1,7 +1,11 @@
 import "./Login.css";
 
-export default function Login({urlServer}) {
+const LOGIN_URI =
+  process.env.NODE_ENV !== "production"
+    ? "http://localhost:8888/login"
+    : "https://thatswhatify-1b19f0e0e43c.herokuapp.com/";
 
+export default function Login() {
   return (
     <div className="login-screen">
       <div className="login-screen__title">
@@ -18,12 +22,9 @@ export default function Login({urlServer}) {
         </p>
       </div>
 
-      <a className="login-button" href="http://localhost:8888/login">
+      <a className="login-button" href={LOGIN_URI}>
         Log In With Spotify
       </a>
     </div>
   );
 }
-
-
-
