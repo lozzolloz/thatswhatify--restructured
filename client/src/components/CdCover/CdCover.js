@@ -148,7 +148,7 @@ export default function CdCover({
           </div>
 
           <p className="date-and-url">
-            Published {formattedDate}&nbsp;thatswhatify.netlify.app
+          © {formattedDate}&nbsp;thatswhatify-1b19f0e0e43c.herokuapp.com
           </p>
         </div>
       </div>

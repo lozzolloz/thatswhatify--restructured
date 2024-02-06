@@ -24,3 +24,15 @@
   --splash: yellow;
   --splash-accent: #093a41;
 }
+
+/* .main-app-formatter {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .main-app-formatter {
+    display: flex;
+    flex-direction: row;
+  }
+} */

@@ -8,6 +8,7 @@ const LOGIN_URI =
 export default function Login() {
   return (
     <div className="login-screen">
+    
       <div className="login-screen__title">
         <p id="home-now" className="text--home">
           THAT'S
@@ -21,10 +22,14 @@ export default function Login() {
           WHATIFY
         </p>
       </div>
+      <p id="explainer">Top track generator for Spotify</p>
+
 
       <a className="login-button" href={LOGIN_URI}>
         Log In With Spotify
       </a>
+
+      <img src="/images/example.png" alt="example" className="example-image"></img>
     </div>
   );
 }

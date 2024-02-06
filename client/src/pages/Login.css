@@ -3,11 +3,15 @@
   --home-accent: #780ff3;
 }
 
+body {
+  overflow: hidden; /* Hide any content that overflows the viewport */
+}
+
 .login-button {
   color: var(--home-accent);
   background-color: var(--home);
   display: inline-block;
-  padding: 1vh 2vh; /* Adjust the padding as needed */
+  padding: 1.4vh 2.4vh; /* Adjust the padding as needed */
   text-decoration: none; /* Remove default underline */
   border: solid 0.2vh;
   border-radius: 2vh;
@@ -16,14 +20,17 @@
   font-weight: bold;
   border-color: var(--home-accent);
   font-family: "Helvetica";
+ 
 }
 
 .login-screen {
+  height: calc(100vh - 10vh);
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
-  margin-top: 10vh;
+  justify-content: space-between;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
 }
 
 .login-screen__title {
@@ -35,8 +42,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 0.5vh;
-  margin-bottom: 0;
+  margin-bottom: -8vh;
 }
 
 #home-now {
@@ -68,4 +74,18 @@
 .text--home__highlighted {
   color: var(--home);
   background-color: var(--home-accent);
+}
+
+#explainer {
+  display: inline-block;
+  padding: 1vh 2vh; /* Adjust the padding as needed */
+  text-decoration: none; /* Remove default underline */
+  font-size: 2.5vh; /* Adjust the font size as needed */
+  font-family: "Helvetica";
+  font-style: italic;
+  margin: 0;
+}
+
+.example-image {
+  width: 50vh;
 }

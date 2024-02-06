@@ -8,6 +8,8 @@ import SaveButton from "../components/SaveButton/SaveButton";
 import { getTopTracks, getCurrentUserProfile } from "../spotify";
 import { catchErrors } from "../utils";
 
+// const isDesktop = window.matchMedia("(min-width: 768px)").matches;
+
 function App() {
   const [topTracks, setTopTracks] = useState([]);
 
@@ -83,11 +85,9 @@ function App() {
         console.error("Error fetching top tracks:", error);
       }
     };
-    
 
     catchErrors(fetchData());
   }, [trackLimit, timeRange]);
-
 
   useEffect(() => {
     const fetchData = async () => {
@@ -99,7 +99,6 @@ function App() {
         console.error("Error fetching top tracks:", error);
       }
     };
-    
 
     catchErrors(fetchData());
   }, [trackLimit, timeRange]);
@@ -115,27 +114,34 @@ function App() {
   return (
     <>
       <div className="main-app">
-        <OptionsSelect
-          trackLimit={trackLimit}
-          trackLimits={trackLimits}
-          setTrackLimit={setTrackLimit}
-          timeRange={timeRange}
-          timeRanges={timeRanges}
-          setTimeRange={setTimeRange}
-          theme={theme}
-          themes={themes}
-          setTheme={setTheme}
-        />
+        <div className="main-app-formatter">
+          <div>
+            <OptionsSelect
+              trackLimit={trackLimit}
+              trackLimits={trackLimits}
+              setTrackLimit={setTrackLimit}
+              timeRange={timeRange}
+              timeRanges={timeRanges}
+              setTimeRange={setTimeRange}
+              theme={theme}
+              themes={themes}
+              setTheme={setTheme}
+            />
 
-        <CdCover
-          topTracks={topTracks}
-          trackLimit={trackLimit}
-          timeRange={timeRange}
-          theme={theme}
-          formattedDate={formattedDate}
-          userName={userName}
-        />
-        <SaveButton onClick={captureScreenshot} theme={theme} />
+            {/* {isDesktop && (<SaveButton onClick={captureScreenshot} theme={theme} />)} */}
+          </div>
+          <CdCover
+            topTracks={topTracks}
+            trackLimit={trackLimit}
+            timeRange={timeRange}
+            theme={theme}
+            formattedDate={formattedDate}
+            userName={userName}
+          />
+          {/* {!isDesktop && (<SaveButton onClick={captureScreenshot} theme={theme} />)} */}
+
+          <SaveButton onClick={captureScreenshot} theme={theme} />
+        </div>
         <Footer />
       </div>
     </>
